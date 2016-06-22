@@ -1,0 +1,40 @@
+<div ng-controller="ctrl.checkin.liste as checkinCtrl">
+
+<!--  <ul id="form">
+    <form class="" ng-init="getLocation()" ng-submit="setValuesLocal()">
+      <li id="lbl"><b>Ajout d'un chekin</b> {{c.id}}</li>
+       <li ng-bind="c.name"></li>
+      <li id="lat">
+          <b>latitude:</b>
+          <input type="text" id="lat" name="lat" value="" ng-model="la">
+      </li>
+      <li id="long">
+          <b>longitude:</b>
+          <input type="text" id="lng" name="lng" value="" ng-model="lo" >
+          <button type="submit" name="submit"> Ajouter</button>
+      </li>
+    </form>
+  </ul>
+-->
+
+
+  <div ng-repeat="c in checkinListe">
+
+    <ul ng-init="displayWeather(c)" >
+      <div style="background-image: url({{c.image_path}});">
+      <li class="img">
+        <a href="#id/{{c.id}}">
+          <img ng-src={{c.user.picture}} />
+        </a>
+      </li>
+      <li class="ex" class="id"><b>id:</b> {{c.id}}</li>
+      <!-- <li ng-bind="c.name"></li> -->
+      <li class="ex"><b>Nom:</b> {{c.user.name}}</li>
+      <li class="ex"><b>Email:</b> {{c.user.email}}</li>
+      <li class="ex"><b>Lieu:</b>{{ c.weather.name }}</li>
+      <li class="ex"><b>Temps météo: </b>{{ c.weather.weather[0].description }}</li>
+      <li class="ex"><b>Latitude-Longitude: </b>{{ c.lat}} - {{ c.lng}}</li>
+      </div>
+    </ul>
+  </div>
+</div>

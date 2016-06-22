@@ -1,0 +1,14 @@
+<div ng-controller="ctrl.login as loginCtrl">
+
+  <form ng-submit="login()" name="loginForm">
+    <header>Connectez vous !</header>
+    <label>Email <span>*</span></label>
+    <input type="text" name="email" ng-model="email" placeholder="Email" required autofocus>
+    <label>Password <span>*</span></label>
+    <input type="password" name="password" ng-model="password" placeholder="Password" required>
+    <button type="submit">Login</button>
+  </form>
+
+<a href="#index">Retour à la page d'accueil.</a>
+
+</div>
