@@ -19,3 +19,4 @@ l'ajout d'un checkin avec la geolocalisation (fonctionnalité prévu lorsque la 
 ce qui ne marche pas :
 détails d'un checkin (conflit d'une requête via map)
 l'authentification
+cordova
